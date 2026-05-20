@@ -1,0 +1,605 @@
+/* Author: Aaliyah Sofia Henwood
+Date Started: 22-04-2026
+Date Completed: XX-05-2026
+Ver: 01
+*/
+
+/*
+COLOURS
+#FFFFFF - White (backgrounds)
+#FFDCF3 - "Pink Lace" (pink theme pages: top nav bar, footer and other sections that need to be emphasised)
+#EDEDED - "Christmas White" (grey theme pages: top nav bar, footer and other sections that need to be emphasised)
+#BCEBE8 - "Karma"(turquoise theme pages: top nav bar, footer and other sections that need to be emphasised)
+#660E49 - "Tyrian Purple"(text on 'pink' web pages)
+#6F6E6E - "Attractive Grey"(text on grey pages)
+#0E6666 - "Royal Teal"(text on turquiose pages)
+#E29DCB - "Prime Pink"(the text above the Pidjette drawing.)
+#000000 - Black (for paragraph text)
+
+*/
+
+
+/* -- #### REFERENCES ARE AT THE BOTTOM OF THE DOCUMENT :) #### -- */
+
+
+/*GLOBAL SETTINGS
+----------------------------------------
+*/
+p {
+    font-family: sans-serif;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+}
+
+/*- unordered list style -*/
+ul {
+    font-family: sans-serif;
+    padding: 10px;
+}
+
+/*- ordered list style -*/
+li {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+/*- link style -*/
+a {
+    font-family: sans-serif;
+    padding: 5px;
+}
+
+img {
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+/*--- mainly styling for the gallery and projects pages---*/
+.imag {
+    width: 80%;
+    height: auto;
+    object-fit: fill;
+}
+
+
+/*--- Style specific to the Commissions Adina img and cat_girl img---*/
+.imgadina {
+    height: 300px;
+    object-fit: fill;
+}
+
+div {
+    background-clip: content-box;
+    padding: 30px;
+}
+
+/*--- To shrink the border of the div---*/
+.undiv {
+    padding: 1px;
+}
+
+/*---I'm not sure what this was originally for...---*/
+.diffdiv {
+    background-clip: content-box;
+}
+
+/*---div boxes for grey pages (gallery and projects)---*/
+.grydiv {
+    background-clip: content-box;
+    background-color: #EDEDED;
+    padding: 30px;
+    padding-top: 30px;
+}
+
+
+/* HEADER
+---------------------------------------- */
+/*-- All headers feature different colours for each page's theme --*/
+header {
+    background-color: #660E49;
+	height: 100px;
+	color: #ffffff;	
+    display: flex;
+    justify-content: center;
+}
+
+.header_turq {
+    background-color: #0E6666;
+	height: 100px;
+	color: #ffffff;	
+    display: flex;
+    justify-content: center;
+}
+
+.header_gry {
+    background-color: #6F6E6E;
+	height: 100px;
+	color: #ffffff;	
+    display: flex;
+    justify-content: center;
+}
+
+
+header h1 {
+	visibility: hidden;
+    position: absolute;
+}
+
+header img {
+	position: relative;
+    width: 80px;
+    height: 80px;
+	z-index: 1;
+    display: block;
+    margin: auto;
+}
+
+
+
+/* NAVIGATION BAR
+---------------------------------------- */
+/*-- All nav bars feature different colours for each page's theme --*/
+
+nav ul {
+    list-style-type: none;
+    background-color: #FFDCF3;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.gry_ul {
+    list-style-type: none;
+    background-color: #EDEDED;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+    
+}
+
+.teal_ul {
+    list-style-type: none;
+    background-color: #BCEBE8;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+    
+}
+
+nav a {
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #660E49;
+    padding: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: block;
+    text-align: center;
+}
+
+.gry_nav {
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #6F6E6E;
+    padding: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: block;
+    text-align: center;
+}
+
+.two-column-layout-3 {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.teal_nav {
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #0E6666;
+    padding: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: block;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+/* hover colour remains the same across all pages of my website.*/
+nav li :hover {
+    background-color: #0E6666;
+    color: white;
+    /* When hovering over the links in the menu bar
+        the background will turn a chili red colour.*/
+}
+
+
+/* Carousel CSS (HOMEPAGE) new
+----------------------------------------*/
+
+* {box-sizing: border-box}
+
+/*---Images for the Carousel---*/
+.carou_img {
+	width: 100%;
+    vertical-align: middle;
+}
+
+/*---Section containing the Carousel Images---*/
+.carou_sect {
+    background-color: #660E49;
+}
+
+/* Carousel container */
+.slideshow-container {
+    max-width: 1400px;
+    position: relative;
+    margin: auto;
+}
+
+/* the next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Position the "prev button" to the left */
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, adds a pink background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(255, 220, 243, 0.6);
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* For smaller screens, decreases the text size */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+}
+
+/* Paragraph Content
+----------------------------------------
+*/
+
+h1 {
+    font-family: sans-serif;
+}
+
+h2 {
+    font-family: sans-serif;
+    font-size: 30px;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+/* The "Thank you for visiting!" text*/
+.h2_pidj {
+    font-family: sans-serif;
+    font-size: 30px;
+    color: #E29DCB;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    font-family: sans-serif;
+    font-size: 25px;
+    padding-left: 20px;
+    padding-top: 30px;
+    
+}
+
+/* The "Check Out the Gallery!" text*/
+.home_h3 {
+    padding: 1px;
+}
+
+h4 {
+    font-family: sans-serif;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding: 10px;
+}
+
+h5 {
+    font-family: sans-serif;
+    font-size: 1em;
+    padding-left: 20px;
+}
+
+/* The "here" link to the Gallery from the Home page*/
+.linky {
+    color: #660E49;
+}
+
+.pidj_crys {
+    display: block;
+    margin: auto;
+    padding: 10px;
+    
+}
+
+.pnk_sq_sect {
+    background-color: #FFDCF3;
+}
+
+.an_image{
+       background-color: #FFDCF3;
+    padding: 10px;
+    width: 100;
+}
+
+/*(column layout start)*/
+.two-column-layout {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 0.5fr 1.5fr;
+    
+}
+
+.two-column-layout-2 {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1.5fr 0.5fr;
+}
+
+.pnk_sect-left {
+   background-color: #FFDCF3;
+    padding: 10px;
+    width: 100%;
+}
+
+.pnk_sect-right {
+   background-color: #FFDCF3;
+    padding: 10px;
+    width: 100%;
+}
+
+.turq_sect-left {
+    background-color: #BCEBE8;
+    padding: 10px;
+    width: 100%
+}
+.turq_sect-right {
+    background-color: #BCEBE8;
+    padding: 10px;
+    width: 100%
+}
+
+
+/* FOOTER (don't mind the funny names for the footer classes...)
+----------------------------------------
+*/
+.pink_foot {
+    background-color: #FFDCF3;
+    padding-left: 30px;
+    padding: 20px;
+}
+
+.pnklink {
+    color: #660E49;
+    padding: 10px;
+    display: flex;
+}
+
+.teal_foot {
+    background-color: #BCEBE8;
+    padding-left: 20px;
+    padding: 20px;
+}
+
+.teallink {
+    color: #0E6666;
+    padding: 10px;
+    display: flex;
+}
+
+.gry_foot {
+    background-color: #EDEDED;
+    padding-left: 20px;
+    padding: 20px;
+}
+
+.grylink {
+    color: #6F6E6E;
+    padding: 10px;
+    display: flex;
+}
+
+/* HOME
+----------------------------------------
+*/
+.white_sect{
+    align-items: center;
+}
+
+/* MEDIA QUERIES - a popular technique for tailoring websites.
+------------------------------------------ */
+
+@media (max-width:926px) {
+    nav a {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .teal_nav {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .gry_nav {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width:740px) {
+    
+.two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr
+}    
+
+.two-column-layout-2 {
+    display: grid;
+    grid-template-columns: 1fr
+}
+    
+.two-column-layout-3 {
+    display: grid;
+    grid-template-columns: 1fr
+}
+
+.pnk_sq_sect {
+    background-color: #FFDCF3;
+    text-align: center;
+}
+
+@media (max-width:626px) {
+    nav a {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .teal_nav {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    .gry_nav {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+@media (max-width:526px) {
+    nav a {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 15px;
+    }
+    
+    .teal_nav {
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 15px;
+    }
+    
+    .gry_nav {
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width:502px) {
+    nav a {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 12px;
+    }
+    .imgadina {
+        height: 200px;
+        object-fit: fill;
+    }
+    .teal_nav {
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 12px;
+    }
+    .gry_nav {
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width:431px) {
+    nav a {
+        padding-left: 110px;
+        padding-right: 110px;
+        font-size: 18px;
+    }
+    
+    .teal_nav {
+        padding-left: 105px;
+        padding-right: 105px;
+        font-size: 18px;
+    }
+    
+    .gry_nav {
+        padding-left: 105px;
+        padding-right: 105px;
+        font-size: 18px;
+    }
+}
+
+
+/* REFERENCES:
+------------------------------------------
+
+(assisted with the simplicity and usability of my website.)
+Friedman, V. 2021. 10 principles of good web design. 
+https://www.smashingmagazine.com/2008/01/10-principles-of-effective-web-design/
+
+(assisted with making my website organised and responsive.)
+Web Dev Simplified. 2018. Learn flexbox in 15 minutes [Video].
+https://www.youtube.com/watch?v=fYq5PXgSsbE&t=623s
+
+(assisted with my top nav bar.)
+Web Master. 2020. Center align navigation menus with HTML and CSS : For Beginner [Video].
+https://www.youtube.com/watch?v=R5aRUdM7Iio
+
+(assisted with column layouts.)
+Powell, K. (2025). 
+HTML & CSS for Absolute Beginners: Creating a two-column layout. 
+https://www.youtube.com/watch?v=u2Va9Poda_g
+
+
+(assisted in general - with relearning concepts)
+(such as: links, headers/paragraphs, etc.)
+W3Schools. (2026). CSS object fit property. https://www.w3schools.com/css/css3_object-fit.asp#:
+~:text=The%20CSS%20object%2Dfit%20property,not%20preserve%20the%20aspect%20ratio.
+W3Schools. (2026). How to - slideshow. https://www.w3schools.com/howto/howto_js_slideshow.asp
+
+*/
