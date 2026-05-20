@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+        <title>HOME</title>
+            <link rel="icon" href="images/cxc_logo.gif" type="image/gif">
+            <link rel="stylesheet" href="styles.css">
+            <link rel="stylesheet" href="styles.java">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" 
+      rel="stylesheet">
+</head>
+   
+<body>
+    <header>
+        <h1>ClovesXCorridors</h1>
+        <img class="logo" src="images/cxc_logo_hp.png" alt="clovesXcorridors logo">
+    </header>
+    
+<!-- NAVIGATION/the links at the top of my website-->
+<!-- <ul> command is used to create a dot point list-->
+<!-- <li> is used to create a list of these links-->
+    <nav>
+        <ul>
+            <li><a href="index.html" title="to ze homepage!" target="_blank">HOME</a></li>
+            <li><a href="about.html" title="about me :D">ABOUT</a></li>
+            <li><a href="gallery.html" title="gallery :P">GALLERY</a></li>
+            <li><a href="commissions.html" title="commissions info">COMMISSIONS</a></li>
+            <li><a href="projects.html" title="past/current projects">PROJECTS</a></li>
+        </ul>
+    </nav>
+    
+    
+<main>     
+    
+    <h2><i>Hello! Kaya! Γεια σου!</i></h2>
+<!-- <div> command is used to group the elements - photos/links and titles - together-->
+<!-- carousel element was contructed with w3schools-->
+<!-- Slideshow container -->
+<section class= "carou_sect">
+    <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides">
+        <img class="carou_img" src="images/titania.png">
+      </div>
+
+      <div class="mySlides">
+        <img class="carou_img" src="images/oberon.png">
+      </div>
+
+      <div class="mySlides">
+        <img class="carou_img" src="images/ezmarelda.png">
+      </div>
+
+      <div class="mySlides">
+        <img class="carou_img" src="images/petunia.png">
+      </div>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+        
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+</section>
+    
+    <section class="pnk_sq_sect">
+        <div class="two-column-layout-2">
+            <div class="undiv">
+                <h3 class="home_h3">Check Out the Gallery!</h3>
+                    <p>Click <a class="linky" href="gallery.html" title="gallery :P"><i>here</i></a> to be teleported!</p>
+                    <h4>My artwork styles and topics:</h4>
+                    <ul>
+                        <li>&hearts; Indigenous Art</li>
+                        <li>&hearts; Concept Art</li>
+                        <li>&hearts; Fan Art</li>
+                        <li>&hearts; Realism</li>
+                    </ul>
+            </div>
+            <img class="imgadina" src="images/cat_girl.png" alt="A Cat Boy and a Human Girl.">
+        </div>
+    </section>
+    <section class="white_sect">
+        <h2 class="h2_pidj">Thank you for visiting!</h2>
+            <img class="pidj_crys" src="images/pidjette.png" alt="Pidjette holding a crystal." style="height:300px;">
+    </section>
+    
+</main> 
+
+
+<!-- FOOTER/contains copyright and contact information-->
+<footer class="pink_foot">
+    <p>&copy;ClovesXCorridors</p>
+        <a class="pnklink" href="/docs/Terms_of_use_Lesscloves.pdf" title="Terms of Use.">Terms of Use</a>
+		
+    
+		<address>
+			<ul>
+                <li>My contacts: <a class="pnklink" href="mailto:aaliyahsh@yahoo.com" title="my email!">aaliyahsh@yahoo.com</a></li>
+                <li>Concept Art Insta: <a class="pnklink" href="https://www.instagram.com/lessclovesinmycurry/" 
+                                        title="lessclovesinmycurry">@lessclovesinmycurry</a></li>
+                <li>Indigenous Art Insta: <a class="pnklink" href="https://www.instagram.com/corridorsofdesign/" 
+                                        title="corridorsofdesign">@corridorsofdesign</a></li>
+            </ul>
+		</address>
+</footer>
+
+<!--javascript-->
+<!-- initially i had this javascript in a separate file but later 
+found out that it would cause the script to break as both the html and
+java were read simultaneously-->
+<!--To solve the issue the javascript is now found at the bottom of
+this file so that it is read AFTER the html... Thankfully after many
+hours of reading and watching youtube my image carousel works!-->
+    
+<script>  
+let slideIndex = 1;
+    showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+  }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+  }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+}
+</script> 
+    
+</body>
+
+</html>
